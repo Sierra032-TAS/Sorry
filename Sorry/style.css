@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffe4e1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #d63384;
+    font-size: 3rem;
+}
+
+/* El Corazón */
+.corazon {
+    background-color: #ff4d6d;
+    display: inline-block;
+    height: 50px;
+    margin: 40px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 50px;
+    animation: latido 0.6s infinite alternate;
+}
+
+.corazon:before, .corazon:after {
+    content: "";
+    background-color: #ff4d6d;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+
+.corazon:before { top: -25px; left: 0; }
+.corazon:after { left: 25px; top: 0; }
+
+@keyframes latido {
+    to { transform: scale(1.2) rotate(-45deg); }
+}
+
+/* Botones */
+.botones {
+    margin-top: 50px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+#btnSi {
+    background-color: #4caf50;
+    color: white;
+}
+
+#btnNo {
+    background-color: #f44336;
+    color: white;
+    position: absolute; /* Necesario para que se mueva libremente */
+}
